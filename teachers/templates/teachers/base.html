@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}School Directory{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>School Directory</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'teacher_list' %}">Teachers</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+</body>
+</html>

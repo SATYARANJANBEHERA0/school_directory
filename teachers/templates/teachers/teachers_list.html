@@ -1,0 +1,14 @@
+{% extends "teachers/base.html" %}
+
+{% block content %}
+  <h1>Teachers List</h1>
+  <ul>
+    {% for teacher in teachers %}
+      <li>
+        <a href="{% url 'teacher_detail' teacher.id %}">{{ teacher.first_name }} {{ teacher.last_name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'teacher_create' %}">Add Teacher</a>
+</div>
+{% endblock %}
